@@ -17,14 +17,19 @@
 #'   \item{max}{Maximum value of the chosen variable.}
 #'
 #' @examples
+#' # Load the ISLR package to access the Hitters dataset
+#' library(ISLR)
+#'
 #' # Summarize Salary in the Hitters dataset
 #' summarize_variable(Hitters, "Salary")
 #'
 #' # Summarize Hits in the Hitters dataset
 #' summarize_variable(Hitters, "Hits")
 #'
+#' @importFrom ISLR Hitters
+#' @importFrom stats median sd na.omit
 #' @export
-summarize_variable <- function(dataset = Hitters, variable_name) {
+summarize_variable <- function(dataset = ISLR::Hitters, variable_name) {
 
   if (!(variable_name %in% colnames(dataset))) {
     stop(paste("The dataset does not contain a column named '", variable_name, "'", sep = ""))
