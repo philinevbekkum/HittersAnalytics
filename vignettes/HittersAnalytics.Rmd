@@ -1,0 +1,36 @@
+---
+title: "HittersAnalytics"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{HittersAnalytics}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+# Introduction
+
+This vignette provides an introduction to the `HittersAnalytics` package.
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Example Usage
+
+Here's an example of how to use the `top_10_variable()` function from the `HittersAnalytics` package:
+
+```{r}
+library(HittersAnalytics)
+library(ISLR)
+
+# Load data
+data(Hitters)
+
+# Get the top 10 players by Salary
+top_players <- top_10_variable(Hitters, "Salary")
+head(top_players)
+
+```
