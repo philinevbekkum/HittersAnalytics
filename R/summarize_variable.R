@@ -26,7 +26,6 @@
 #' # Summarize Hits in the Hitters dataset
 #' summarize_variable(Hitters, "Hits")
 #'
-#' @importFrom ISLR Hitters
 #' @importFrom stats median sd na.omit
 #' @export
 summarize_variable <- function(dataset = ISLR::Hitters, variable_name) {
