@@ -13,4 +13,5 @@ Imports:
     stats, 
     dplyr, 
     ggplot2, 
-    rlang
+    rlang, 
+    magrittr
