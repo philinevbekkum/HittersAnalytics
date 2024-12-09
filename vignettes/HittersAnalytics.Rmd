@@ -31,7 +31,7 @@ knitr::opts_chunk$set(
 
 Before using the package, install and load the necessary libraries and dataset. 
 
-```{r}
+```{r getting started}
 
 # Install required packages
 install.packages("ISLR")
@@ -53,7 +53,7 @@ data(Hitters)
 
 Below are examples of how to use the functions in the 'HittersAnalytics' package. You can replace the variable names in these examples with any clumn from the 'Hitters' dataset. 
 
-```{r}
+```{r example usage}
 
 # Summarize the Salary variable
 summarize_variable(Hitters, "Salary")
