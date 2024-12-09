@@ -67,7 +67,7 @@ correlation <- calculate_correlation(Hitters, "Years", "Hits")
 correlation
 
 # Create a scatterplot of Years vs. Hits
-scatterplot(Hitters, "Years", "Hits")
+scatterplot("Years", "Salary")
 
 ```
 
