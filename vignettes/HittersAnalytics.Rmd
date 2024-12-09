@@ -9,6 +9,15 @@ vignette: >
 
 # Introduction
 
+The 'HittersAnalytics' package provides tools for analyzing the 'Hitters' dataset from the 'ISLR' package, which contains information on the performance and salaries of baseball players. With 'HittersAnalytics' you can: 
+
+- Summarize specific variables. 
+- Find the top 10 players by a chosen variable. 
+- Calculate correlations between two variables. 
+- Create scatterplots to visualize relationships between two variables. 
+
+This vignette demonstrates how to use the package's functions effectively. 
+
 This vignette provides an introduction to the `HittersAnalytics` package.
 
 ```{r, include = FALSE}
@@ -18,19 +27,47 @@ knitr::opts_chunk$set(
 )
 ```
 
-## Example Usage
+# Getting Started 
 
-Here's an example of how to use the `top_10_variable()` function from the `HittersAnalytics` package:
+Before using the package, install and load the necessary libraries and dataset. 
 
 ```{r}
+
+# Install required packages
+install.packages("ISLR")
+install.packages("devtools")
+
+# Install the HittersAnalytics package from GitHub
+devtools::install_github("philinevbekkum/HittersAnalytics")
+
+# Load the libraries
 library(HittersAnalytics)
 library(ISLR)
 
-# Load data
+# Load the Hitters dataset
 data(Hitters)
 
-# Get the top 10 players by Salary
-top_players <- top_10_variable(Hitters, "Salary")
+```
+
+# Example Usage 
+
+Below are examples of how to use the functions in the 'HittersAnalytics' package. You can replace the variable names in these examples with any clumn from the 'Hitters' dataset. 
+
+```{r}
+
+# Summarize the Salary variable
+summarize_variable(Hitters, "Salary")
+
+# Find the top 10 players by Runs
+top_players <- top_10_variable(Hitters, "Runs")
 head(top_players)
 
+# Calculate the correlation between Years and Hits
+correlation <- calculate_correlation(Hitters, "Years", "Hits")
+correlation
+
+# Create a scatterplot of Years vs. Hits
+scatterplot(Hitters, "Years", "Hits")
+
 ```
+
