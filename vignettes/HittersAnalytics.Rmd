@@ -25,6 +25,9 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
+
+options(repos = c(CRAN = "https://cran.rstudio.com"))
+
 ```
 
 # Getting Started 
@@ -34,8 +37,7 @@ Before using the package, install and load the necessary libraries and dataset.
 ```{r getting started}
 
 # Install required packages
-install.packages("ISLR")
-install.packages("devtools")
+install.packages(c("knitr", "rmarkdown", "ISLR", "devtools"))
 
 # Install the HittersAnalytics package from GitHub
 devtools::install_github("philinevbekkum/HittersAnalytics")
